@@ -1,7 +1,6 @@
 <input type="text" [(ngModel)]= "title" >
 {{ title }}
 
-<app-producto> </app-producto>
 
 <!--
 <div *ngIf = "title ==='Enmanuel'">
@@ -39,11 +38,10 @@
         Eliminar
       </button>
   </li>
+</ul>
 
   <div *ngFor = "let producto of productos">
-    {{ producto.title }}
-    <img [src]="producto.image" alt="">
-    {{ producto.price }}
+    <app-producto (productoClicked)="clickProducto($event)" [producto]= "producto" > </app-producto>
   </div>
-</ul>
+
 

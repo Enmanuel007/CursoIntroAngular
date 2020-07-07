@@ -65,6 +65,10 @@ deleteNombre(posicionNombre: number){
   this.lista.splice(posicionNombre, 1);
 }
 
+clickProducto(id:number){
+  console.log('producto');
+  console.log(id);
+}
 
 }
 
