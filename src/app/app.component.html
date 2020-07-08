@@ -40,8 +40,11 @@
   </li>
 </ul>
 
-  <div *ngFor = "let producto of productos">
-    <app-producto (productoClicked)="clickProducto($event)" [producto]= "producto" > </app-producto>
+  <div class = "producto-grid">
+    <app-producto 
+      *ngFor = "let producto of productos" 
+      (productoClicked)="clickProducto($event)"[producto]= "producto" > 
+    </app-producto>
   </div>
 
 
