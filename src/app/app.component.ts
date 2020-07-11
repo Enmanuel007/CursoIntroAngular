@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Producto} from './producto.model';
 
 @Component({
@@ -10,6 +10,10 @@ export class AppComponent {
   title = 'ema-store';
 
   lista = ['Ema', 'Dani', 'Milan'];
+
+  objeto = {};
+  
+  expo = 10;
 
   
   productos: Producto[] = [
