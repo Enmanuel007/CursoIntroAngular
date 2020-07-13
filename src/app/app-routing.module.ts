@@ -6,27 +6,24 @@ import {ProductosComponent} from './productos/productos.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {DemoComponent} from './demo/demo.component';
 
+
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
+    component: HomeComponent
   },
-  
-
   {
     path: 'productos',
-    component: ProductosComponent,
+    component: ProductosComponent
   },
-
   {
     path: 'contacto',
-    component: ContactoComponent,
+    component: ContactoComponent
   },
-
   {
     path: 'demo',
-    component: DemoComponent,
-  },
+    component: DemoComponent
+  }
 
 
 ];

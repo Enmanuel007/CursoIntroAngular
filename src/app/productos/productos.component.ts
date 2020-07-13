@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Producto} from './producto.model';
+import { Producto } from '../producto.model';
 
 @Component({
   selector: 'app-productos',
@@ -56,7 +56,7 @@ export class ProductosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   clickProducto(id:number){
