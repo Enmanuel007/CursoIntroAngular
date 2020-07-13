@@ -10,6 +10,10 @@ import { CartaComponent } from './carta/carta.component';
 import { ExponetialPipe } from './exponetial.pipe';
 import { ExponencialPipe } from './exponencial.pipe';
 import { HighligntDirective } from './highlignt.directive';
+import { HomeComponent } from './home/home.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { HighligntDirective } from './highlignt.directive';
     CartaComponent,
     ExponetialPipe,
     ExponencialPipe,
-    HighligntDirective
+    HighligntDirective,
+    HomeComponent,
+    ProductosComponent,
+    ContactoComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

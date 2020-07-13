@@ -1,0 +1,47 @@
+
+<input type="text" [(ngModel)]= "title" >
+{{ title }}
+
+<input type="text" [(ngModel)]= "expo" >
+{{ expo | exponencial }}
+
+
+<!--
+<div *ngIf = "title ==='Enmanuel'">
+  Usuario Enmanuel
+</div>
+
+<div *ngIf = "title ==='Daniela'">
+  Usuario Daniela
+</div>
+
+<div *ngIf = "title ==='Ochoa'">
+  Usuario Ochoa
+</div> !-->
+
+<div [ngSwitch] = "title">
+  <p *ngSwitchCase ="'Enmanuel'">Usuario Enmanuel</p>
+  <p *ngSwitchCase ="'Daniela'">Usuario Daniela</p>
+  <p *ngSwitchCase ="'Ochoa'">Usuario Ochoa</p>
+  <p *ngSwitchDefault>No hay Usuarios</p>
+</div>
+
+<button (click)= "addNombre()">
+  Agregar nombre
+</button>
+
+
+<ul>
+  <li *ngIf = "lista.length === 0">
+    La lista está vacía
+  </li>  
+  <li *ngFor = "let name of lista; index as i">
+    {{name}} {{i}}
+    
+      <button (click)= "deleteNombre(i)">
+        Eliminar
+      </button>
+  </li>
+</ul>
+
+ 
