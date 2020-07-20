@@ -4,8 +4,8 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductoComponente } from './componentes/producto.componente'
-  import { from } from 'rxjs';
+import { ProductoComponente } from './componentes/producto.componente';
+import { from } from 'rxjs';
 import { CartaComponent } from './carta/carta.component';
 import { ExponetialPipe } from './exponetial.pipe';
 import { ExponencialPipe } from './exponencial.pipe';
