@@ -6,6 +6,7 @@ import {ProductosComponent} from './productos/productos.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {DemoComponent} from './demo/demo.component';
 import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
+import {ProductoDetalleComponent} from './producto-detalle/producto-detalle.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'productos',
     component: ProductosComponent
+  },
+  {
+    path: 'productos/:id',
+    component: ProductoDetalleComponent
   },
   {
     path: 'contacto',
