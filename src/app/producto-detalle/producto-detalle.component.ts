@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import {ProductosService} from './../productos.service';
+import {ProductosService} from './../core/servicios/productos/productos.service';
 import {Producto} from './../producto.model';
 
 @Component({
@@ -21,7 +21,6 @@ export class ProductoDetalleComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
       this.producto = this.productosService.getProducto(id);
-      
     });
   }
 

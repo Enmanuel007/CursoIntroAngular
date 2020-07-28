@@ -4,20 +4,19 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductoComponente } from './componentes/producto.componente';
+import { ProductoComponente } from './producto/producto.componente';
 import { from } from 'rxjs';
 import { CartaComponent } from './carta/carta.component';
-import { ExponetialPipe } from './exponetial.pipe';
-import { ExponencialPipe } from './exponencial.pipe';
-import { HighligntDirective } from './highlignt.directive';
+import { ExponetialPipe } from './shared/pipes/exponencial/exponetial.pipe';
 import { ProductosComponent } from './productos/productos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { DemoComponent } from './demo/demo.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { LayoutComponent } from './layout/layout.component';
+import {SharedModule} from './shared/shared.module';
+import {CoreModule} from './core/core.module';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +24,9 @@ import { LayoutComponent } from './layout/layout.component';
     ProductoComponente,
     CartaComponent,
     ExponetialPipe,
-    ExponencialPipe,
-    HighligntDirective,
     ProductosComponent,
     ContactoComponent,
     DemoComponent,
-    HeaderComponent,
-    FooterComponent,
     PageNotfoundComponent,
     ProductoDetalleComponent,
     LayoutComponent
@@ -39,7 +34,9 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
