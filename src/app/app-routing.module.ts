@@ -7,6 +7,8 @@ import {DemoComponent} from './demo/demo.component';
 import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
 import {ProductoDetalleComponent} from './producto-detalle/producto-detalle.component';
 import {LayoutComponent} from './layout/layout.component';
+import {AdminGuard} from './admin.guard';
+import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -36,6 +38,7 @@ const routes: Routes = [
       },
       {
         path: 'contacto',
+        canActivate: [AdminGuard],
         component: ContactoComponent
       },
     ]
