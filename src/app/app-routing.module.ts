@@ -1,7 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import {ContactoComponent} from './contacto/contacto.component';
 import {DemoComponent} from './demo/demo.component';
 import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
 import {LayoutComponent} from './layout/layout.component';
@@ -32,10 +31,8 @@ const routes: Routes = [
       },
       {
         path: 'contacto',
-        canActivate: [AdminGuard],
-        component: ContactoComponent
+        loadChildren: () => import('./contacto/contacto.module').then(m => m.ContactoModule)
       },
-
       {
         path: 'demo',
         component: DemoComponent
