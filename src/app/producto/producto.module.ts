@@ -8,6 +8,8 @@ import { ProductosComponent } from './componentes/productos/productos.component'
 import { ProductoRoutingModule } from './producto-routing.module';
 import { SharedModule } from './../shared/shared.module';
 
+import { MaterialModule } from './../material/material.module';
+
 @NgModule({
   declarations: [
     ProductoComponente,
@@ -17,7 +19,8 @@ import { SharedModule } from './../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    MaterialModule
   ]
 })
 export class ProductoModule {
