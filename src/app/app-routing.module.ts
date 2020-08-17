@@ -1,11 +1,9 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import {ProductosComponent} from './productos/productos.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {DemoComponent} from './demo/demo.component';
 import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
-import {ProductoDetalleComponent} from './producto-detalle/producto-detalle.component';
 import {LayoutComponent} from './layout/layout.component';
 import {AdminGuard} from './admin.guard';
 import { from } from 'rxjs';
@@ -30,24 +28,22 @@ const routes: Routes = [
       },
       {
         path: 'productos',
-        component: ProductosComponent
-      },
-      {
-        path: 'productos/:id',
-        component: ProductoDetalleComponent
+        loadChildren: () => import('./producto/producto.module').then(m => m.ProductoModule)
       },
       {
         path: 'contacto',
         canActivate: [AdminGuard],
         component: ContactoComponent
       },
+
+      {
+        path: 'demo',
+        component: DemoComponent
+      },
     ]
   },
 
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
+ 
 
   /*Página Not Found si se escribe una ruta no válida*/
   {

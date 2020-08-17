@@ -1,13 +1,13 @@
-import {Component, 
-    Input, 
-    Output, 
-    EventEmitter, 
-    OnChanges, 
-    SimpleChanges, 
-    OnInit, DoCheck, 
+import {Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
+    SimpleChanges,
+    OnInit, DoCheck,
     OnDestroy
-} from '@angular/core'; 
-import {Producto} from '../producto.model'; 
+} from '@angular/core';
+import {Producto} from '../../../core/models/producto.model';
 
 @Component({
     selector: 'app-producto',
