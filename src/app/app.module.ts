@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { CartaComponent } from './carta/carta.component';
 import { ExponetialPipe } from './shared/pipes/exponencial/exponetial.pipe';
-import { DemoComponent } from './demo/demo.component';
-import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { LayoutComponent } from './layout/layout.component';
 import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core/core.module';
@@ -19,8 +17,6 @@ import {CoreModule} from './core/core.module';
     AppComponent,
     CartaComponent,
     ExponetialPipe,
-    DemoComponent,
-    PageNotfoundComponent,
     LayoutComponent
   ],
   imports: [

@@ -1,8 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import {DemoComponent} from './demo/demo.component';
-import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
+
 import {LayoutComponent} from './layout/layout.component';
 import {AdminGuard} from './admin.guard';
 import { from } from 'rxjs';
@@ -31,11 +30,14 @@ const routes: Routes = [
       },
       {
         path: 'contacto',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./contacto/contacto.module').then(m => m.ContactoModule)
       },
+
       {
         path: 'demo',
-        component: DemoComponent
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
     ]
   },
@@ -45,7 +47,7 @@ const routes: Routes = [
   /*Página Not Found si se escribe una ruta no válida*/
   {
     path: '**',
-    component: PageNotfoundComponent
+    loadChildren: () => import('./page-notfound/page-notfound.module').then(m => m.PageNotFoundModule)
   }
 
 
