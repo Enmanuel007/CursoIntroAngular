@@ -7,7 +7,8 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
 
-
+import { MaterialModule } from './../material/material.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
     HighligntDirective
   ],
   imports: [
-    CommonModule, RouterModule
+    CommonModule,
+    RouterModule,
+    MaterialModule,
+    MatIconModule
+
   ]
 })
 export class SharedModule { }
