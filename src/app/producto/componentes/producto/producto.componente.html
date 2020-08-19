@@ -9,10 +9,10 @@
         </mat-card-subtitle>
     </mat-card-header>
 
-
-    <img [src]="producto.image" alt="">
-
-
+    <div class="crop-image">
+        <img [src]="producto.image" alt="">
+    </div>
+    
 
     <mat-card-content>
         <p>{{producto.description | slice: 0:10}}</p>
