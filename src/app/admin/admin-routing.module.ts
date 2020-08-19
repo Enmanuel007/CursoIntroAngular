@@ -2,11 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProductoFormComponent } from './componentes/producto-form/producto-form.component';
+import { NavComponent } from './componentes/nav/nav.component';
 
 const routes: Routes = [
+  
   {
-    path:'create',
-    component:ProductoFormComponent
+    path:'',
+    component:NavComponent,
+    children:[
+      {
+        path:'create',
+        component:ProductoFormComponent
+      },
+    ]
   }
 ];
 
