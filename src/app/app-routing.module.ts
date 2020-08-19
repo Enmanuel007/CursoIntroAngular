@@ -41,8 +41,11 @@ const routes: Routes = [
       },
     ]
   },
-
- 
+   
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
 
   /*Página Not Found si se escribe una ruta no válida*/
   {

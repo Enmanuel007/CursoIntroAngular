@@ -9,6 +9,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -20,6 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     MatBadgeModule,
     MatInputModule,
     MatCardModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   exports:[
     MatButtonModule,
@@ -28,7 +33,9 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatBadgeModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
