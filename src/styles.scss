@@ -5,11 +5,23 @@
     grid-gap: 50px 20px;
 }
 
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 @media (min-width: 576px){
     .producto-grid {
        grid-template-columns: repeat(2, 1fr);
     }
+    .container {
+        max-width: 1110px;
+        padding-right: 16px;
+        padding-left: 16px;
+      }
 }
 
 @media (min-width: 765px){
