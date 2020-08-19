@@ -8,10 +8,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
 
 import { MaterialModule } from './../material/material.module';
-import { MatIconModule } from '@angular/material/icon';
-import { MatBadgeModule } from '@angular/material/badge';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +26,7 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatFormFieldModule,
-    MatInputModule
-
+    MaterialModule
   ]
 })
 export class SharedModule { }
