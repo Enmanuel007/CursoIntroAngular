@@ -10,6 +10,8 @@ import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
 import { MaterialModule } from './../material/material.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MatBadgeModule } from '@angular/material/badge';
     RouterModule,
     MaterialModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ]
 })
