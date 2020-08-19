@@ -9,6 +9,7 @@ import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
 
 import { MaterialModule } from './../material/material.module';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     RouterModule,
     MaterialModule,
-    MatIconModule
+    MatIconModule,
+    MatBadgeModule
 
   ]
 })

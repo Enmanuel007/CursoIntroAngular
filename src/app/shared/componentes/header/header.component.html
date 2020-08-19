@@ -1,10 +1,16 @@
 <mat-toolbar color= "primary">
     <mat-toolbar-row>
-        <nav>
-            <a mat-button routerLink="/home" routerLinkActive = "active">Home</a>
-            <a mat-button routerLink="/productos"routerLinkActive = "active">Productos</a>
-            <a mat-button routerLink="/contacto"routerLinkActive = "active">Contacto</a>
-        </nav>
-        <mat-icon>shopping_cart</mat-icon>
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+                <a mat-button routerLink="/home" routerLinkActive = "active">Home</a>
+                <a mat-button routerLink="/productos"routerLinkActive = "active">Productos</a>
+                <a mat-button routerLink="/contacto"routerLinkActive = "active">Contacto</a>
+            </nav>
+            <a mat-raised-button matBadge="7" matBadgeColor="warn">
+                <mat-icon>shopping_cart</mat-icon>
+                Carrito
+            </a>
+        </div>
+        
     </mat-toolbar-row>
 </mat-toolbar>
