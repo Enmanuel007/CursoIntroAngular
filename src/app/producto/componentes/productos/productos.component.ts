@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from './../../../core/models/producto.model';
+import { ProductosService } from './../../../core/servicios/productos/productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -8,60 +9,26 @@ import { Producto } from './../../../core/models/producto.model';
 })
 export class ProductosComponent implements OnInit {
 
-  productos: Producto[] = [
-    {
-      id: '1',
-      image: 'assets/images/camiseta.png',
-      title: 'Camiseta',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '2',
-      image: 'assets/images/hoodie.png',
-      title: 'Hoodie',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '3',
-      image: 'assets/images/mug.png',
-      title: 'Mug',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '4',
-      image: 'assets/images/pin.png',
-      title: 'Pin',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '5',
-      image: 'assets/images/stickers1.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '6',
-      image: 'assets/images/stickers2.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-  ];
+  productos: Producto[] = [];
 
 
-  constructor() { }
+  constructor(
+    private productosService: ProductosService
+  ) { }
 
   ngOnInit() {
+    this.fetchProductos();
   }
 
   clickProducto(id:number){
     console.log('producto');
     console.log(id);
   }
-
+  
+  fetchProductos(){
+    this.productosService.getAllProductos()
+    .subscribe(productos => {
+      this.productos = productos;
+    });
+  }
 }
