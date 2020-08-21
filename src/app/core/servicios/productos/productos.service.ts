@@ -22,8 +22,12 @@ export class ProductosService {
     //return this.http.get<Producto>(`${environment.url_api}/productos/${id}`);
   }
 
-
-  crearProducto(producto: Producto){
+//CRUD
+  crearProducto(producto: Producto){ 
     return this.http.post('https://platzi-store.herokuapp.com/products', producto);
+  }
+
+  actualizarProducto(id: string, changes: Partial<Producto>){
+    return this.http.put(`https://platzi-store.herokuapp.com/products/${id}`, changes);
   }
 }

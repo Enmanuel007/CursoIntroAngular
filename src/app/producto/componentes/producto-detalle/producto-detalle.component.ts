@@ -30,7 +30,9 @@ export class ProductoDetalleComponent implements OnInit {
     });
   }
 
-  crearProducto(){
+  //CRUD
+
+  crearUnProducto(){
     const nuevoProducto: Producto = {
     id: '222',
     title: 'Nuevo producto desde Ángular',
@@ -39,6 +41,17 @@ export class ProductoDetalleComponent implements OnInit {
     description: 'Nuevo Producto de Camiseta'
   };
     this.productosService.crearProducto(nuevoProducto)
+    .subscribe(producto => {
+      console.log(producto);
+    });
+  }
+
+  actualizarUnProducto(){
+    const editarProducto: Partial<Producto> = {
+    price: 40000,
+    description: 'Producto actualizado'
+  };
+    this.productosService.actualizarProducto('2', editarProducto)
     .subscribe(producto => {
       console.log(producto);
     });
