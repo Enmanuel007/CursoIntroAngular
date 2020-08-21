@@ -57,4 +57,11 @@ export class ProductoDetalleComponent implements OnInit {
     });
   }
 
+  eliminarUnProducto(id: string){
+    this.productosService.eliminarProducto('222')
+    .subscribe(rta => {
+      console.log(rta);
+    });
+  }
+
 }

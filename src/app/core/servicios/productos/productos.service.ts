@@ -30,4 +30,8 @@ export class ProductosService {
   actualizarProducto(id: string, changes: Partial<Producto>){
     return this.http.put(`https://platzi-store.herokuapp.com/products/${id}`, changes);
   }
+
+  eliminarProducto(id: string){
+    return this.http.delete(`https://platzi-store.herokuapp.com/products/${id}`);
+  }
 }
