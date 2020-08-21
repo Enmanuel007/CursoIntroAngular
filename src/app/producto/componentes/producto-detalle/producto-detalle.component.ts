@@ -29,4 +29,19 @@ export class ProductoDetalleComponent implements OnInit {
       this.producto = producto;
     });
   }
+
+  crearProducto(){
+    const nuevoProducto: Producto = {
+    id: '222',
+    title: 'Nuevo producto desde Ángular',
+    image: 'assets/images/camiseta.png',
+    price: 30000,
+    description: 'Nuevo Producto de Camiseta'
+  };
+    this.productosService.crearProducto(nuevoProducto)
+    .subscribe(producto => {
+      console.log(producto);
+    });
+  }
+
 }
