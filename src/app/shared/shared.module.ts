@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ExponencialPipe } from './pipes/exponencial/exponencial.pipe';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HighligntDirective } from './directivas/highlignt/highlignt.directive';
+import { CartaComponent } from './componentes/carta/carta.component';
 
 import { MaterialModule } from './../material/material.module';
+
 
 
 @NgModule({
@@ -15,7 +18,8 @@ import { MaterialModule } from './../material/material.module';
     ExponencialPipe,
     HeaderComponent,
     FooterComponent,
-    HighligntDirective
+    HighligntDirective,
+    CartaComponent
   ],
   exports: [
     ExponencialPipe,
@@ -26,7 +30,8 @@ import { MaterialModule } from './../material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
