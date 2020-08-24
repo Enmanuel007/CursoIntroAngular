@@ -26,4 +26,14 @@ export class ProductoListaComponent implements OnInit {
     });
 
 }
+
+  eliminarProducto(id){
+    this.productosService.eliminarProducto(id)
+    .subscribe(rta => {
+      this.fetchProductos();
+    });
+  }
+
+
+
 }
