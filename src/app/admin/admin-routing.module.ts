@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductoFormComponent } from './componentes/producto-form/producto-form.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
-import { TableComponent } from './componentes/table/table.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
+import { FormProductoComponent } from './componentes/form-producto/form-producto.component';
 
 const routes: Routes = [
   
@@ -21,13 +21,14 @@ const routes: Routes = [
         path: 'dasboard',
         component: DashboardComponent
       },
-      {
-        path: 'table',
-        component: TableComponent
-      },
+      
       {
         path: 'productos',
         component: ProductoListaComponent
+      },
+      {
+        path: 'productos/create',
+        component: FormProductoComponent
       }
     ]
   }

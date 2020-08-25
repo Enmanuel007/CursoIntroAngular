@@ -8,12 +8,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../material/material.module';
 import { NavComponent } from './componentes/nav/nav.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
-import { TableComponent } from './componentes/table/table.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
+import { FormProductoComponent } from './componentes/form-producto/form-producto.component';
 
 
 @NgModule({
-  declarations: [ProductoFormComponent, NavComponent, DashboardComponent, TableComponent, ProductoListaComponent],
+  declarations: [ProductoFormComponent, NavComponent, DashboardComponent, ProductoListaComponent, FormProductoComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
