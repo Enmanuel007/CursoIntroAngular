@@ -10,10 +10,11 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
 import { FormProductoComponent } from './componentes/form-producto/form-producto.component';
+import { ProductoEditComponent } from './componentes/producto-edit/producto-edit.component';
 
 
 @NgModule({
-  declarations: [ProductoFormComponent, NavComponent, DashboardComponent, ProductoListaComponent, FormProductoComponent],
+  declarations: [ProductoFormComponent, NavComponent, DashboardComponent, ProductoListaComponent, FormProductoComponent, ProductoEditComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

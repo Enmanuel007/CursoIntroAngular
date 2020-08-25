@@ -6,6 +6,7 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
 import { FormProductoComponent } from './componentes/form-producto/form-producto.component';
+import { ProductoEditComponent } from './componentes/producto-edit/producto-edit.component';
 
 const routes: Routes = [
   
@@ -21,7 +22,6 @@ const routes: Routes = [
         path: 'dasboard',
         component: DashboardComponent
       },
-      
       {
         path: 'productos',
         component: ProductoListaComponent
@@ -29,7 +29,12 @@ const routes: Routes = [
       {
         path: 'productos/create',
         component: FormProductoComponent
+      },
+      {
+        path: 'productos/edit/:id',
+        component: ProductoEditComponent
       }
+
     ]
   }
 ];
